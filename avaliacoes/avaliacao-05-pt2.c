@@ -28,7 +28,7 @@ int main() {
 		lines++;
 	}
 	
-	printf("O arquivo tem %d linhas", lines / 2);
+	printf("O arquivo tem %d linha(s)", lines / 2);
 	
 	fclose(arq);
 
