@@ -4,7 +4,7 @@
 int main() {
 	FILE *arq;
 	char character;
-	int lines;
+	int numVogais;
 	
 	arq = fopen("arq.txt", "w");
 	
@@ -25,8 +25,13 @@ int main() {
 	arq = fopen("arq.txt", "r");
 	
 	while((character = fgetc(arq)) != EOF) {
-		printf("%c", character);
+		if (character == 'a' || character == 'e' || character == 'i' || character == 'o' || character == 'u' ||
+            character == 'A' || character == 'E' || character == 'I' || character == 'O' || character == 'U') {
+            	numVogais++;
+			}
 	}
+	
+	printf("O arquivo tem %d vogais", numVogais);
 	
 	fclose(arq);
 
